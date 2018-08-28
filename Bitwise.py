@@ -1,0 +1,26 @@
+#Bitwise Operation
+import cv2
+import numpy as np
+img=cv2.imread("shetty.jpg")
+square = np.zeros((300,300),np.uint8)
+cv2.rectangle(square,(50,50),(250,250),255,-1)
+cv2.imshow("Square",square)
+cv2.waitKey(0)
+el = np.zeros((300,300),np.uint8)
+cv2.ellipse(el,(150,150),(150,150),50,0,180,255,-1)
+
+cv2.imshow("Ellipse",el)
+cv2.waitKey(0)
+And = cv2.bitwise_and(square,el)
+cv2.imshow("And operator",And)
+cv2.waitKey(0)
+Or= cv2.bitwise_or(square,el)
+cv2.imshow("or operator",Or)
+cv2.waitKey(0)
+Exor= cv2.bitwise_xor(square,el)
+cv2.imshow("Exor operator",Exor)
+cv2.waitKey(0)
+Not= cv2.bitwise_not(square)
+cv2.imshow("Not operator",Not)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
